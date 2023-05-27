@@ -1,0 +1,95 @@
+.skills-container {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 2rem;
+    border-radius: 15px;
+    border: 3px ridge #fff;
+    box-shadow: 0 0 15px lightgray;
+
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+
+.skill-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1d1d1d;
+    transition: all 0.2s ease-in-out;
+    height: 90px;
+    width: 100px;
+    text-align: center;
+    border-radius: 15px;
+    border: 3px ridge lightgray;
+    visibility: hidden;
+}
+
+.skill-box:hover {
+    visibility: visible;
+    padding-bottom: 50px;
+    border-top: transparent;
+}
+
+.skill-box p {
+    display: none;
+}
+
+.skill-box img {
+    visibility: visible;
+    height: 90px;
+    width: 90px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.skill-box:hover img {
+    transform: translateY(-10px);
+}
+
+.skill-box:hover p {
+    display: block;
+}
+
+
+
+
+@media (max-width: 640px) {
+    .skills-container {
+        margin-top: 2rem;
+        gap: 1.5rem;
+        padding: 1.5rem 0.7rem;
+        border: none;
+    }
+
+    .skill-box {
+        height: 60px;
+        width: 60px;
+        background-color: transparent;
+        border: none;
+    }
+
+    .skill-box img {
+        height: 60px;
+        width: 60px;
+    }
+
+    .skill-box:hover {
+        visibility: none;
+        padding: 0;
+    }
+
+    .skill-box:hover img {
+        transform: none;
+    }
+
+    .skill-box:hover p {
+        font-size: smaller;
+    }
+}

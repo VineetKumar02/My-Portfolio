@@ -1,0 +1,281 @@
+.hero-container {
+    display: flex;
+    margin: 0 auto;
+    align-items: flex-start;
+    max-width: 80rem;
+    gap: 1.25rem;
+    padding-top: 120px;
+    height: 100vh;
+    z-index: 999;
+}
+
+
+.astronanut {
+    position: absolute;
+    top: 10rem;
+    right: 10rem;
+    height: 50%;
+    animation: float 2s linear 0s infinite alternate-reverse;
+    z-index: 1;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(50px);
+    }
+}
+
+
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-top: 4rem;
+}
+
+.links a {
+    font-size: 30px;
+    color: white;
+}
+
+.links a:hover {
+    color: #0A66C2;
+}
+
+
+
+.design {
+    display: flex;
+    margin-top: 1.25rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.design .circle {
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+}
+
+.design .line {
+    width: 0.3rem;
+    height: 25rem;
+}
+
+.topline {
+    display: block;
+    margin-top: 4rem;
+    font-size: 35px;
+    color: darkgray;
+}
+
+
+.heroHeadText {
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 60px;
+}
+
+.multiText {
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 50px;
+    color: #c33011;
+    text-transform: capitalize;
+}
+
+.heroSubText {
+    color: #dfd9ff;
+    font-size: 19px;
+}
+
+
+
+.button {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    background: #1b3645;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 20px 5px;
+    cursor: pointer;
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
+}
+
+.button:hover {
+    background: linear-gradient(to right, #4faa2e, #48be24);
+}
+
+.button:active {
+    background: #c33011;
+}
+
+.button .icon-container {
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.button__text,
+.button .icon {
+    padding: 0 15px;
+}
+
+.button .icon-container .icon {
+    font-size: 2em;
+}
+
+
+
+
+.scroll-indicator {
+    display: flex;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-indicator .outer {
+    padding: 0.5rem;
+    border-radius: 1.5rem;
+    width: 35px;
+    height: 60px;
+    border: 4px solid #ecff0a;
+}
+
+.scroll-indicator .inner {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background-color: #ecff0a;
+}
+
+.text-cursor {
+    font-size: 40px;
+}
+
+
+@media (max-width: 1400px) {
+    .astronanut {
+        height: 35%;
+    }
+}
+
+
+@media (max-width: 1150px) {
+
+    .hero-container {
+        padding: 0 2rem;
+        padding-top: 100px;
+        margin-bottom: -50px;
+    }
+
+    .astronanut {
+        height: 25%;
+        right: 2rem;
+    }
+}
+
+
+
+@media (max-width: 850px) {
+    .hero-container {
+        padding: 0 1.5rem;
+        padding-top: 100px;
+        margin-bottom: -50px;
+    }
+
+    .astronanut {
+        top: 75%;
+        left: 1rem;
+        height: 15%;
+    }
+
+    .links {
+        width: 0.5rem;
+    }
+
+    .links a {
+        font-size: 20px;
+    }
+
+    .heroSubText br {
+        display: none;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .astronanut {
+        top: 75%;
+        left: 1rem;
+        height: 15%;
+    }
+
+    .design .circle {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .design .line {
+        height: 20rem;
+    }
+
+    .topline {
+        margin-top: 2rem;
+        font-size: 25px;
+    }
+
+    .heroHeadText {
+        font-size: 35px;
+    }
+
+    .multiText {
+        font-size: 35px;
+    }
+
+    .heroSubText {
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 450px) {
+    .heroHeadText {
+        font-size: 30px;
+    }
+
+    .multiText {
+        font-size: 30px;
+    }
+
+    .heroSubText {
+        font-size: 15px;
+    }
+
+    .button {
+        font-size: 14px;
+    }
+
+    .button .icon-container .icon {
+        font-size: 1.5em;
+    }
+
+    .scroll-indicator {
+        top: 80%;
+    }
+}
