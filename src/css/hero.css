@@ -4,9 +4,10 @@
     align-items: flex-start;
     max-width: 80rem;
     gap: 1.25rem;
-    padding-top: 120px;
+    padding-top: 130px;
     height: 100vh;
-    z-index: 999;
+    position: relative;
+    z-index: 2;
 }
 
 
@@ -15,8 +16,8 @@
     top: 10rem;
     right: 10rem;
     height: 50%;
-    animation: float 2s linear 0s infinite alternate-reverse;
     z-index: 1;
+    animation: float 2s linear 0s infinite alternate-reverse;
 }
 
 @keyframes float {
@@ -50,10 +51,9 @@
 
 
 .design {
-    display: flex;
     margin-top: 1.25rem;
+    display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
@@ -77,13 +77,11 @@
 
 
 .heroHeadText {
-    color: #ffffff;
     font-weight: 900;
     font-size: 60px;
 }
 
 .multiText {
-    color: #ffffff;
     font-weight: 900;
     font-size: 50px;
     color: #c33011;
@@ -92,7 +90,7 @@
 
 .heroSubText {
     color: #dfd9ff;
-    font-size: 19px;
+    font-size: 20px;
 }
 
 
@@ -108,16 +106,12 @@
     font-weight: 500;
     margin: 20px 5px;
     cursor: pointer;
-    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
 }
 
 .button:hover {
     background: linear-gradient(to right, #4faa2e, #48be24);
 }
 
-.button:active {
-    background: #c33011;
-}
 
 .button .icon-container {
     height: 100%;
@@ -126,12 +120,12 @@
     align-items: center;
 }
 
-.button__text,
-.button .icon {
+.button-text,
+.button .icon-container {
     padding: 0 15px;
 }
 
-.button .icon-container .icon {
+.button .icon-container {
     font-size: 2em;
 }
 
@@ -168,7 +162,15 @@
 }
 
 
+
 @media (max-width: 1400px) {
+
+    .hero-container {
+        padding: 0 2rem;
+        padding-top: 100px;
+        margin-bottom: -50px;
+    }
+
     .astronanut {
         height: 35%;
     }
@@ -176,12 +178,6 @@
 
 
 @media (max-width: 1150px) {
-
-    .hero-container {
-        padding: 0 2rem;
-        padding-top: 100px;
-        margin-bottom: -50px;
-    }
 
     .astronanut {
         height: 25%;
@@ -240,10 +236,7 @@
         font-size: 25px;
     }
 
-    .heroHeadText {
-        font-size: 35px;
-    }
-
+    .heroHeadText,
     .multiText {
         font-size: 35px;
     }
@@ -255,23 +248,18 @@
 }
 
 @media (max-width: 450px) {
-    .heroHeadText {
-        font-size: 30px;
-    }
 
+    .heroHeadText,
     .multiText {
         font-size: 30px;
     }
 
-    .heroSubText {
+    .heroSubText,
+    .button {
         font-size: 15px;
     }
 
-    .button {
-        font-size: 14px;
-    }
-
-    .button .icon-container .icon {
+    .button .icon-container {
         font-size: 1.5em;
     }
 

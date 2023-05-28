@@ -70,7 +70,7 @@ const Navbar = () => {
               />
 
               <div
-                className={`${!toggle ? "hidden" : "flex"} 
+                className={`${!toggle ? "hidden" : ""} 
             black-gradient mobile-nav-links-container`}
               >
                 <ul>

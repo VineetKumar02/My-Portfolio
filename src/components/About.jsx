@@ -41,7 +41,7 @@ const About = () => {
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className='text'
+        className='sectionSubSubText'
       >
         Throughout my academic journey, I have gained a strong understanding of programming languages,
         including C++, Python, Java along with proficiency in web development technologies. I also have

@@ -1,8 +1,5 @@
 import React from "react";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
+import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import { motion } from "framer-motion";
 
 import "react-vertical-timeline-component/style.min.css";
@@ -58,16 +55,14 @@ const Experience = () => {
         </h2>
       </motion.div>
 
-      <div className='timeline-container'>
-        <VerticalTimeline>
-          {experiences.map((experience, index) => (
-            <ExperienceCard
-              key={`experience-${index}`}
-              experience={experience}
-            />
-          ))}
-        </VerticalTimeline>
-      </div>
+      <VerticalTimeline className="timeline-container" >
+        {experiences.map((experience, index) => (
+          <ExperienceCard
+            key={`experience-${index}`}
+            experience={experience}
+          />
+        ))}
+      </VerticalTimeline>
     </>
   );
 };

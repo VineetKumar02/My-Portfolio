@@ -6,6 +6,7 @@ import React, { useEffect } from 'react';
 import Typed from 'typed.js';
 
 import headerImg from "../assets/images/header-img.svg";
+import cv from "../assets/cv.pdf";
 
 
 // Font Awesome Imports
@@ -34,15 +35,15 @@ const Hero = () => {
 
   const handleDownloadCV = () => {
     const link = document.createElement('a');
-    link.href = '/path/to/your/cv.pdf';
-
-    link.setAttribute('download', 'cv.pdf');
+    link.href = cv;
+    link.download = 'Vineet_CV.pdf';
     link.style.display = 'none';
 
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
+
 
 
 
@@ -81,7 +82,7 @@ const Hero = () => {
           </p>
 
           <button className="button" onClick={handleDownloadCV}>
-            <span className="button__text">Download CV</span>
+            <span className="button-text">Download CV</span>
             <span className="icon-container">
               <FontAwesomeIcon icon={faDownload} className="icon" />
             </span>

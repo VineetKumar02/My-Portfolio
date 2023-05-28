@@ -2,12 +2,13 @@ import React from "react";
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 
-
-import "../css/works.css"
 import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
+
+import "../css/works.css"
+
 
 const ProjectCard = ({
   index,
@@ -18,7 +19,7 @@ const ProjectCard = ({
   source_code_link,
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div variants={fadeIn("down", "spring", index * 0.5, 0.75)}>
       <Tilt
         className='work-card'
         options={{
@@ -41,7 +42,7 @@ const ProjectCard = ({
         </div>
 
         <div className='text-container'>
-          <h3>{name}</h3>
+          <h2>{name}</h2>
           <p>{description}</p>
         </div>
 
@@ -70,7 +71,7 @@ const Works = () => {
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className='text'
+        className='sectionSubSubText'
       >
         Following projects showcases my skills and experience through
         real-world examples of my work. Each project is briefly described with

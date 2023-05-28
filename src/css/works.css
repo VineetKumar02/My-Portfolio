@@ -1,12 +1,5 @@
-.text {
-    line-height: 30px;
-    margin-top: 1rem;
-    font-size: 17px;
-    color: darkgrey;
-}
-
 .work-cards-container {
-    margin-top: 5rem;
+    margin-top: 3rem;
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
@@ -22,7 +15,6 @@
 
 .work-card .image-container {
     position: relative;
-    width: 100%;
     height: 230px;
 }
 
@@ -45,7 +37,7 @@
     align-items: center;
     width: 2.5rem;
     height: 2.5rem;
-    border-radius: 9999px;
+    border-radius: 50%;
     cursor: pointer;
 }
 
@@ -57,12 +49,6 @@
 
 .work-card .text-container {
     margin-top: 1.25rem;
-}
-
-.work-card .text-container h3 {
-    color: #ffffff;
-    font-weight: 700;
-    font-size: 24px;
 }
 
 .work-card .text-container p {

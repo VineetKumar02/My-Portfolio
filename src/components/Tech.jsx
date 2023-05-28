@@ -5,9 +5,8 @@ import { SectionWrapper } from "../hoc";
 import { technologies } from "../constants";
 import { textVariant } from "../utils/motion";
 
-
-
 import "../css/tech.css";
+
 
 const Tech = () => {
 
